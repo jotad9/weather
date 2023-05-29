@@ -11,7 +11,7 @@ body{
     width: 90%;
     max-width: 500px;
     background: linear-gradient(135deg, #6ce891, #427ec7);
-    color: #fff;
+    color: #020202;
     border-radius: 10px;
     margin: 100px auto 0;
     padding: 40px 30px;
@@ -92,5 +92,10 @@ body{
     margin-top: 20px;
 }
 .weather{
+    width: 97%;
+    margin-top: 20px;
     display: none;
+    background-color:#ebfffc;
+    border-radius: 30px;
+    border: #020202 1px solid;
 }

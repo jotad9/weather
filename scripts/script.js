@@ -36,9 +36,18 @@
             // Muestra el elemento con clase "weather" estableciendo su propiedad display en "block".
             document.querySelector(".weather").style.display = "block";
           }   
+
+          searchBox.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+              // Verifica si se presionó la tecla Enter
+              getWeatherData(searchBox.value);
+            }
+          });
         searchButton.addEventListener("click", ()=>{
             getWeatherData(searchBox.value);
         });
+
+
 
     
 

@@ -6,10 +6,16 @@
         const weatherIcon=document.querySelector(".weather-icon"); 
 
         async function getWeatherData(city) {
+
             // Realiza una solicitud a la API de OpenWeatherMap con la ciudad proporcionada y la apiKey.
             const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
             
-            // Convierte la respuesta en formato JSON en un objeto JavaScript.
+            // Verifica si la respuesta de la API es 404 (ciudad no encontrada).
+            if(response.status==404){ 
+              document.querySelector(".error").style.display = "block";
+              document.querySelector(".weather").style.display = "none";
+            }else{
+              // Convierte la respuesta en formato JSON en un objeto JavaScript.
             var data = await response.json();
           
             // Actualiza los elementos del DOM con la información del clima obtenida.
@@ -35,6 +41,9 @@
           
             // Muestra el elemento con clase "weather" estableciendo su propiedad display en "block".
             document.querySelector(".weather").style.display = "block";
+            document.querySelector(".error").style.display = "none";
+            }
+            
           }   
 
           searchBox.addEventListener("keydown", (event) => {

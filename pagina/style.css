@@ -12,7 +12,7 @@ body{
     max-width: 500px;
     background: linear-gradient(135deg, #6ce891, #427ec7);
     color: #020202;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 100px auto 0;
     padding: 40px 30px;
     text-align: center;
@@ -26,15 +26,15 @@ body{
 }
 .search input{
     border-radius: 30px;
-    background: #ebfffc;
     flex: 1;
+    background: #ebfffc;
     border: 0;
     outline: 0;
     padding: 10 25px;
     font-size: 18px;
     height: 60px;
     color: #555;
-    margin-right: 16px;
+    margin-right: 7px;
     text-align: center;
 }
 .search button{
@@ -92,10 +92,16 @@ body{
     margin-top: 20px;
 }
 .weather{
-    width: 97%;
+    width: 98%;
     margin-top: 20px;
     display: none;
     background-color:#ebfffc;
     border-radius: 30px;
     
+}
+.error{
+    text-align: left;
+    width: 98%;
+    margin-top: 10px;
+    display: none;
 }
